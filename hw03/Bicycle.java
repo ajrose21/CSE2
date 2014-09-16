@@ -43,19 +43,40 @@ public class Bicycle{
         feetPerMile=5280,
         inchesperFoot=12,
         secondsperMinute=60,
-        minutesperHour=60,
-        finalDistance=countsTrip*wheelDiameter*PI*inchesperFoot*feetPerMile,
-        finalTime=secsTrip*(1/secondsperMinute)*(1/minutesperHour);
-        double distanceTrip;
+        minutesperHour=60;
         
+        //changing distance variables so there are only two decimal places
+        double distance1=countsTrip*wheelDiameter*PI*(1/inchesperFoot)*(1/feetPerMile);
+        int miles=(int)distance1, //whole mile number
+        tens1=(int)(distance1*10)%10,
+        hundreds1=(int)(distance1*100)%100; //storing digits to the right of finalDistance
+      
+        
+        //changing time variables so there are only two decimal places
+        double minuteTime=secsTrip*(1/secondsperMinute);
+        int minuteTime2= (int)minuteTime,
+        tens4=(int)(minuteTime*10)%10,
+        hundreds4=(int)(minuteTime*100)%100;
+        
+        //changing time variables so there are only two decimal places
+        double time1=secsTrip*(1/secondsperMinute)*(1/minutesperHour);
+        int time2= (int)time1,
+        tens2=(int)(time1*10)%10,
+        hundreds2=(int)(time1*100)%100;
+        
+        //changing mph variables so there are only two decimal places
+        double mph1=distance1/time1;
+        int mph2= (int)mph1,
+        tens3=(int)(mph1*10)%10,
+        hundreds3=(int)(mph1*100)%100;
         
 
 //Print the statement below which shows the calculations needed
         System.out.println("The distance was "
-        +countsTrip*wheelDiameter*PI*inchesperFoot*feetPerMile+ " miles.");
+        +miles+"."+tens1+hundreds1+ " miles.");
         System.out.println("The distance took "
-        +secsTrip*(1/secondsperMinute)*(1/minutesperHour)+" hours.");
-        System.out.println("The average mph for the trip was "+
-        (finalDistance/finalTime));
+        +minuteTime2+"."+tens4+hundreds4+" minutes.");
+        System.out.println("The average mph was "+mph2+"."+tens3+hundreds3+".");
+        
         } //end of main method
 } //end of class
