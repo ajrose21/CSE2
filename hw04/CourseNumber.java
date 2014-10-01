@@ -19,7 +19,7 @@ public class CourseNumber{
     //add main method
     public static void main (String [] args) {
         
-    //defining variables/ introducing Scnaner
+    //defining variables/ introducing Scanner
     Scanner myScanner;
     myScanner= new Scanner( System.in);
     
