@@ -15,6 +15,7 @@
 //      program should print a random draw from a deck of cards
 
 import java.util.Scanner;
+import java.util.Random; //inputting random number generator
 
 //define a class
 public class RandomGames {
@@ -25,32 +26,46 @@ public class RandomGames {
         //defining variables
         Scanner myScanner;
         myScanner=new Scanner(System.in);
-        
+        Random randomGenerator = new Random();
+        int bettingNumber = randomGenerator.nextInt(39);
+    
         System.out.println(
             "Enter R or r for Roulette, C or c for craps, P or p for pick a card: ");
         String randomGame= myScanner.next();
         String R="", r="", C="", c= "",P="", p=""; 
         
-        if (randomGame==R | randomGame==r); {
-            System.out.println("Roulette game is not yet implemented");
-            System.exit(0);   
-        }
-        if (randomGame==P | randomGame==p); {
-            System.out.println("Roulette game is not yet implemented");
-            System.exit(0);
-        }
-            
-            
         
-        if (randomGame==C | randomGame==c); {
-            int roll1= (int)(Math.random()*6)+1;
-            int roll2= (int)(Math.random()*6)+1;
-            int total= roll1+roll2;
-            
-            System.out.println(roll1 + "+" + roll2 + "=" + total);
-        }
+        if (randomGame==R); {
+            int rouletteNumber = randomGenerator.nextInt(39);
+                    System.out.println(rouletteNumber);
+                    System.exit(0);;
+        }   
         
+        if (randomGame==r); {
+                int rouletteNumber = randomGenerator.nextInt(39);
+                    System.out.println(rouletteNumber);
+                    System.exit(0);;
+        }   
         
-       
+        if (randomGame==P); {
+               System.out.println("Picking game is not yet implemented");
+                System.exit(0);
+        }   
+        
+        if (randomGame==p); {
+                System.out.println("Picking game is not yet implemented");
+                System.exit(0);
+        }   
+        
+        if (randomGame==C); {
+                System.out.println("Craps game is not yet implemented");
+                System.exit(0);
+        }   
+        
+        if (randomGame==c); {
+                System.out.println("Craps game is not yet implemented");
+                System.exit(0);
+        }   
+        
         } //end of main method
         } //end of class

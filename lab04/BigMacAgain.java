@@ -20,22 +20,14 @@ public class BigMacAgain {
         myScanner = new Scanner( System.in);
         
         
-        
         //print the following
         
         System.out.println(
             "Enter the number of Big Macs (integer >0): ");
             
         int nBigMacs= myScanner.nextInt();
-            if(!myScanner.hasNextInt()) {
-           
-                System.out.println(
-                "You did not enter an integer");
-            }
-              //leaves the program
-        
         double costBigMac= nBigMacs*2.22;
-       
+    
         
         System.out.println("You ordered "+nBigMacs+ 
             " for a cost of $"+ (costBigMac));
@@ -45,18 +37,19 @@ public class BigMacAgain {
         String fries= myScanner.next();
         
         if(fries.equals("Y") || fries.equals("y")){
+            System.out.println("You ordered fries for a cost of 2.15");
             costBigMac += 2.15;
         }
         else if(fries.equals("N") || fries.equals("n")){
-            
+            costBigMac=costBigMac;
         }
         else{
-            
+            System.out.println("You did not select a correct choice");
         }
       
-        
+    System.out.println("The total cost of the meal is "+costBigMac);    
        
                 
                 
-        } 
-} 
+        } //end of main method
+} //end of class
