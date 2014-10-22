@@ -35,18 +35,18 @@ public class RandomGames {
         String R="", r="", C="", c= "",P="", p=""; 
         
         
+        
         if (randomGame==R); {
             int rouletteNumber = randomGenerator.nextInt(39);
                     System.out.println(rouletteNumber);
-                    System.exit(0);;
+                    System.exit(0);
         }   
         
         if (randomGame==r); {
                 int rouletteNumber = randomGenerator.nextInt(39);
                     System.out.println(rouletteNumber);
-                    System.exit(0);;
+                    System.exit(0);
         }   
-        
         if (randomGame==P); {
                System.out.println("Picking game is not yet implemented");
                 System.exit(0);
@@ -66,6 +66,7 @@ public class RandomGames {
                 System.out.println("Craps game is not yet implemented");
                 System.exit(0);
         }   
+        
         
         } //end of main method
         } //end of class

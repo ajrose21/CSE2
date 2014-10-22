@@ -27,10 +27,10 @@ public class BigMacAgain {
             
         int nBigMacs= myScanner.nextInt();
         double costBigMac= nBigMacs*2.22;
-    
+         
         
         System.out.println("You ordered "+nBigMacs+ 
-            " for a cost of $"+ (costBigMac));
+            " for a cost of $"+ (costBigMac2));
         
         System.out.println("Do you want an order of fries (Y/y/N/n)?");
         
@@ -38,16 +38,16 @@ public class BigMacAgain {
         
         if(fries.equals("Y") || fries.equals("y")){
             System.out.println("You ordered fries for a cost of 2.15");
-            costBigMac += 2.15;
+            costBigMac2 += 2.15;
         }
         else if(fries.equals("N") || fries.equals("n")){
-            costBigMac=costBigMac;
+            costBigMac2=costBigMac2;
         }
         else{
             System.out.println("You did not select a correct choice");
         }
       
-    System.out.println("The total cost of the meal is "+costBigMac);    
+    System.out.println("The total cost of the meal is "+costBigMac2);    
        
                 
                 
