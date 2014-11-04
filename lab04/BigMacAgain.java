@@ -27,27 +27,34 @@ public class BigMacAgain {
             
         int nBigMacs= myScanner.nextInt();
         double costBigMac= nBigMacs*2.22;
-         
+        
+        int dollars= (int) costBigMac; //whole dollar amounts
+        int dimes= (int)(costBigMac*10)%10;
+        int pennies=(int)(costBigMac*100)%10;
         
         System.out.println("You ordered "+nBigMacs+ 
-            " for a cost of $"+ (costBigMac2));
+            " for a cost of $"+ dollars+"."+dimes+pennies);
         
         System.out.println("Do you want an order of fries (Y/y/N/n)?");
         
         String fries= myScanner.next();
         
         if(fries.equals("Y") || fries.equals("y")){
-            System.out.println("You ordered fries for a cost of 2.15");
-            costBigMac2 += 2.15;
+            System.out.println("You ordered fries for a cost of $2.15");
+            costBigMac += 2.15;
+            dollars= (int) costBigMac; //whole dollar amounts
+            dimes= (int)(costBigMac*10)%10;
+            pennies=(int)(costBigMac*100)%10;
+        
         }
         else if(fries.equals("N") || fries.equals("n")){
-            costBigMac2=costBigMac2;
+            costBigMac=costBigMac;
         }
         else{
             System.out.println("You did not select a correct choice");
         }
-      
-    System.out.println("The total cost of the meal is "+costBigMac2);    
+       
+    System.out.println("The total cost of the meal is $"+dollars+"."+dimes+pennies);    
        
                 
                 
