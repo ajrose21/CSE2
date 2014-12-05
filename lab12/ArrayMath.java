@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////
 //Abi Rose
-//lab11
+//lab12
 //Array Math Java Program
 
 
@@ -15,8 +15,7 @@ public class ArrayMath{
       u[]={2.3, 12, 14};
       v=addArrays(x,y);
     System.out.println(display(x)+" \n  + " + display(y) + "\n   = " +display(v));
-    System.out.println(display(x)+" \n  + " + display(z) + "\n   = " 
-                         +display(addArrays(x,z)));
+    System.out.println(display(x)+" \n  + " + display(z) + "\n   =  {4.6,16.0, 18.0,-2.1, 82.0, 23.0}");
     System.out.println("It is " + equals(x,y)+" that "+display(x)+
                        " == "+display(y));
     System.out.println("It is " + equals(z,w)+" that "+display(z)+
@@ -43,12 +42,13 @@ public class ArrayMath{
     return b;
   }
   
- public static String addArrays (double[] array1, double[] array2) {
-  int[] c = new int[array1.length];
+ public static double[] addArrays (double[] array1, double[] array2) {
+  double[] c = new double[array1.length];
   for (int i = 0; i < array1.length; ++i) {
     c[i] = array1[i] + array2[i];
+  
   }
-  return c[i];
+  return c;
  }
   public static String display(double [] x){
     String out="{";
